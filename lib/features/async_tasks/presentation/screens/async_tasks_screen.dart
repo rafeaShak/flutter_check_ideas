@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:future_project/features/async_tasks/presentation/viewModels/async_tasks_view_model.dart';
+import 'package:future_project/features/widgets/profile_future_card.dart';
 
 class AsyncTasksScreen extends StatefulWidget {
   final AsyncTasksViewModel viewModel;
@@ -64,7 +65,7 @@ class _AsyncTasksScreenState extends State<AsyncTasksScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            _buildUserProfile(),
+            ProfileFutureCard(userProfile: viewModel.userProfile),
             _buildTaskInput(),
             _buildErrorMessage(),
             Expanded(child: _buildContent()),
@@ -73,26 +74,7 @@ class _AsyncTasksScreenState extends State<AsyncTasksScreen> {
       ),
     );
   }
-
-  Widget _buildUserProfile() {
-    final user = viewModel.userProfile;
-    if (user == null) {
-      return const SizedBox.shrink();
-    }
-
-    return Card(
-      margin: const EdgeInsets.all(16),
-      child: ListTile(
-        leading: const CircleAvatar(
-          //TODO: Is it the same as SF Symbols
-          child: Icon(Icons.person),
-        ),
-        title: Text(user.name),
-        subtitle: Text('Completed tasks: ${user.completedTasks}'),
-      ),
-    );
-  }
-
+  
   Widget _buildTaskInput() {
     return Padding(
       //TODO: What is this?

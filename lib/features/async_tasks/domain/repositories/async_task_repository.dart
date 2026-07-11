@@ -1,4 +1,4 @@
-import '../../../widgets/notifications_stream_card.dart';
+import '../entities/async_task.dart';
 import '../entities/user_profile.dart';
 
 abstract class AsyncTaskRepository {

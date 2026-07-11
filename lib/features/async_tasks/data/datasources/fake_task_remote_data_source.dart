@@ -1,6 +1,5 @@
+import '../../domain/entities/async_task.dart';
 import '../../domain/entities/user_profile.dart';
-
-import '../../../widgets/notifications_stream_card.dart';
 
 class FakeTaskRemoteDataSource {
   final List<AsyncTask> _tasks = [

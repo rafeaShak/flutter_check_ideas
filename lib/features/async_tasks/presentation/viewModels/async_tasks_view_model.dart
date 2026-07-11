@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/foundation.dart';
+import '../../domain/entities/async_task.dart';
 import '../../domain/entities/user_profile.dart';
 import '../../domain/repositories/async_task_repository.dart';
-import '../../../widgets/notifications_stream_card.dart';
 
 class AsyncTasksViewModel extends ChangeNotifier {
   final AsyncTaskRepository repository;

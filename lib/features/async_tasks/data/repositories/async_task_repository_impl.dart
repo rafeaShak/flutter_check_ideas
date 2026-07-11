@@ -1,5 +1,5 @@
 import '../../../async_tasks/data/datasources/fake_task_remote_data_source.dart';
-import '../../../widgets/notifications_stream_card.dart';
+import '../../domain/entities/async_task.dart';
 import '../../domain/repositories/async_task_repository.dart';
 import '../../domain/entities/user_profile.dart';
 
